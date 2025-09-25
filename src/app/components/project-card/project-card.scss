@@ -1,0 +1,22 @@
+.content-wrapper {
+  max-height: 250px;       /* collapsed height */
+  overflow-y: scroll;
+  scrollbar-width: none;
+
+  transition: max-height 1s ease;
+}
+
+.content-wrapper.expanded {
+  overflow-y: scroll;
+  max-height: 1000px;      /* expanded height */
+}
+.screenshot_class{
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.screenshot_class:hover{
+  transform: scale(2.05);
+  transition: transform 0.5s ease;
+}

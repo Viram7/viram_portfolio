@@ -1,0 +1,46 @@
+<section class=" bg-dark text-white " #projects_ id="projects">
+
+  <div class="">
+    <h2 class="text-center fw-bold">PROJECTS</h2>
+    <p class="text-center text-muted mb-5">These are some of my recent projects</p>
+
+ <div class=" " [ngClass]="{ 'overflow-scroll': top_touch }" [ngStyle]="{ 'height.px': top_touch ? screenHeight : 'auto' , }"  >
+     <div class=" py-5 container "  >
+
+      <div class=" g-5 my-5" *ngFor="let project of projects; let i = index">
+      <!-- Alternate layout (image left / text right) -->
+      <div class="row" >
+        <div class="col-md-6" [class.order-md-2]="i % 2 === 0">
+        <a [href]="project.siteLink" target="_blank"><img [src]="project.img" class="img-fluid rounded shadow"
+            alt="{{ project.title }}" /></a>
+      </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-center" [class.order-md-1]="i % 2 === 0">
+        <h4 class="fw-bold text-warning">{{ project.title }}</h4>
+        <p class="text-light small">{{ project.description }}</p>
+
+        <div class="mt-2">
+          <a [href]="project.codeLink" target="_blank" class="btn btn-outline-info btn-sm me-2">
+            <i class="fa-solid fa-code me-1"></i> View Code
+          </a>
+          <a [href]="project.siteLink" target="_blank" class="btn btn-outline-light btn-sm">
+            <i class="fa-solid fa-link me-1"></i> Visit Website
+          </a>
+        </div>
+      </div>
+      </div>
+
+    </div>
+     <div class="mt-5">
+        <hr class="mt-5  border-0 border opacity-100"
+      style="background: linear-gradient(to right, hsl(59, 98%, 50%), #3c11fd); height: 1px" />
+      </div>
+    </div>
+
+ </div>
+
+  </div>
+
+
+
+</section>

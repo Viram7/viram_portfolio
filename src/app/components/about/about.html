@@ -1,0 +1,50 @@
+<div
+  #aboutSection
+  class="container py-5 my-5"
+  [@fadeSlide]="isVisible ? 'visible' : 'hidden'"
+>
+  <div class="row align-items-center">
+    <div
+      class="col-md-4 text-center mb-4 mb-md-0"
+      [@slideImage]="isVisible ? 'visible' : 'hidden'"
+    >
+     <div  class="d-flex" >
+
+
+
+
+      <img src="viram.png"
+     class="rounded-circle shadow-lg img-fluid"
+     width="200"
+    />
+
+
+
+
+     </div>
+    </div>
+
+    <div
+      class="col-md-8 text-white"
+      [@slideText]="isVisible ? 'visible' : 'hidden'"
+    >
+      <h2 class="fw-bold mb-3">Hello 👋</h2>
+      <p>
+        I'm <strong>Viram Kushwaha</strong>, a
+        <strong class="text-info">full-stack web developer 💻</strong>.
+        I am currently pursuing my <strong>MCA (1st year)</strong> at <strong>LPU</strong>.
+      </p>
+
+      <p>
+        I am a <strong class="text-warning">full-stack web developer</strong> and extremely passionate
+        about coding. Technology is my <span class="text-primary fw-bold">first love 💙</span>.
+      </p>
+
+      <p>I enjoy building projects, exploring new frameworks, and sharing knowledge with others.</p>
+    </div>
+
+    <hr class="mt-5 border-0 border opacity-100"
+      style="background: linear-gradient(to right, hsl(59, 98%, 50%), #3c11fd); height: 1px"
+    />
+  </div>
+</div>

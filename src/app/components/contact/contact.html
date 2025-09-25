@@ -1,0 +1,28 @@
+
+<section class="py-5 bg-dark text-white text-center" id="contact">
+  <div class="container">
+    <h2 class="fw-bold mb-4">Get In Touch</h2>
+
+    <!-- Email Icon with link -->
+    <div class="row">
+      <a [href]="'https://wa.me/+91' + phone" class=" col-md-4 fs-1 text-decoration-none">
+        <P class="m-0 mx-1 p-0 fs-1 fa-brands fa-whatsapp text-danger"> </P>
+        <p class="fs-6 m-0 mx-1 p-0">{{ phone }}</p>
+      </a>
+
+      <a [href]="
+          'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=Hello&body=Hi there'
+        " target="_blank" class="col-md-4 text-decoration-none">
+        <p class="m-0 p-0 fs-1">📧</p>
+        <p class="fs-6 m-0 p-0">{{ email }}</p>
+      </a>
+
+      <a [href]="'tel:' + phone" class="col-md-4 fs-1 text-decoration-none">
+        <p class="m-0 mx-1 p-0 fs-1">📞</p>
+        <p class="fs-6 m-0 mx-1 p-0">{{ phone }}</p>
+      </a>
+    </div>
+    <hr class="mt-5 border-0 border opacity-100"
+      style="background: linear-gradient(to right, hsl(59, 98%, 50%), #3c11fd); height: 1px" />
+  </div>
+</section>

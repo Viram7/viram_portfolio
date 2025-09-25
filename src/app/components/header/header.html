@@ -1,0 +1,94 @@
+  <div class=" position-relative ">
+  <app-bg-image></app-bg-image>
+</div>
+
+<div class="position-relative w-100  z-1" style="background-color: rgba(0, 0, 0, 0.781)">
+  <div class="d-flex justify-content-between">
+    <div></div>
+    <hr class="border w-75" />
+    <button (click)="openSidebar()" class="bg-secondary btn btn-secondary m-0">☰</button>
+  </div>
+
+  <div tabindex="0" #sidebar_id   >
+    <!-- Sidebar -->
+    <div [class.active]="isSidebarOpen"  class="sidebar position-fixed top-0 end-0 vh-100 bg-dark text-white p-4">
+      <!-- Close button -->
+      <button (click)="closeSidebar()" class="btn position-absolute top-0 end-0 pt-0 text-white fs-3">
+        &times;
+      </button>
+
+      <!-- Sidebar content -->
+      <div class="d-flex flex-column align-items-center mt-5">
+        <img src="viram.png" class="rounded-circle mb-3" width="100" alt="Profile" />
+        <p class="fw-bold">VIRAM KUSHWAHA</p>
+          <a href="#about" class="text-info text-decoration-none">ABOUT</a>
+  <a href="#skills" class="text-info text-decoration-none">SKILLS</a>
+  <a href="#projects" class="text-info text-decoration-none">PROJECTS</a>
+  <a href="#contact" class="text-info text-decoration-none">CONTACT</a>
+
+     <div class="d-flex gap-3 mt-3 fs-4">
+  <a href="https://www.linkedin.com/in/viram-kushwaha/" target="_blank" class="text-info text-decoration-none">
+    <i class="bi bi-linkedin"></i>
+  </a>
+  <a href="https://github.com/Viram7/" target="_blank" class="text-info text-decoration-none">
+    <i class="bi bi-github"></i>
+  </a>
+  <a href="https://www.facebook.com/vicky.kushwaha.7712826" target="_blank" class="text-info text-decoration-none">
+    <i class="bi bi-facebook"></i>
+  </a>
+  <a href="https://twitter.com/" target="_blank" class="text-info text-decoration-none">
+    <i class="bi bi-twitter"></i>
+  </a>
+  <a href="https://www.instagram.com/_vi_ram/" target="_blank" class="text-info text-decoration-none">
+    <i class="bi bi-instagram"></i>
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <!-- Open button -->
+  </div>
+
+  <div
+    class="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center bg-transparent text-light">
+    <!-- Name -->
+
+    <h2 class="mb-3 fw-bold" style="font-family: 'Courier New', Courier, monospace"  animate.enter="slide-in">
+      VIRAM KUSHWAHA
+    </h2>
+
+    <!-- Role -->
+    <h1 class="fw-bold" >
+      <span class="text-warning"> {{ '{' }} </span>
+     <ng-container *ngFor="let word of typedWords$ | async; let i = index">
+    <ng-container [ngSwitch]="tags[i]">
+      <span *ngSwitchCase="'span'" [ngClass]="classes[i]">{{ word?.text }}</span>
+      <b *ngSwitchCase="'b'" [ngClass]="classes[i]">{{ word?.text }}</b>
+      <i *ngSwitchCase="'i'" [ngClass]="classes[i]">{{ word?.text }}</i>
+      <!-- add more tags as needed -->
+    </ng-container>
+    <span>{{' '}} </span> <!-- space between words -->
+  </ng-container>
+      <span class="text-warning"> {{ '}' }} </span>
+    </h1>
+
+    <!-- Skills -->
+    <p class="mt-3 mb-4"  animate.enter="slide-out" >Angular • Bootstrap • MongoDB • NodeJS</p>
+
+    <!-- Buttons -->
+    <div class="d-flex gap-3 justify-content-center"  animate.enter="slide-up">
+      <a href="#contact" class="btn btn-info px-4">Get In Touch</a>
+      <a href="viram_resume.pdf" download class="btn btn-info px-4">Download Resume</a>
+    </div>
+
+    <!-- Down Arrow -->
+    <div class="mt-5">
+      <a href="#about" class="text-light fs-3">
+        <i class="bi bi-chevron-double-down"></i>
+      </a>
+    </div>
+    <!-- <button class="btn btn-light fw-bolder" > ↓ </button> -->
+  </div>
+  <p id="about"></p>
+</div>
